@@ -7,7 +7,6 @@ Used by the GUI and Colab trainers.
 """
 
 import hashlib as _hashlib
-import tkinter as _tk
 from copy import deepcopy as _deepcopy
 from enum import Enum as _Enum
 from functools import partial as _partial
@@ -1249,6 +1248,12 @@ def _print_nasty_checks_warning():
 
 
 def _nasty_checks_modal():
+    try:
+        import tkinter as _tk
+    except ModuleNotFoundError:
+        _print_nasty_checks_warning()
+        return
+
     msg = "You are ignoring the checks!\nYour model might turn out bad!"
 
     root = _tk.Tk()
