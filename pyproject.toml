@@ -41,7 +41,7 @@ test = [
 ]
 
 [project.urls]
-homepage = "https://github.com/cagataydonmez/ne-mo/"
+homepage = "https://github.com/cagataydonmez/"
 
 [project.scripts]
 nam = "nam.cli:nam_gui"
@@ -51,7 +51,7 @@ nam-hello-world = "nam.cli:nam_hello_world"
 [tool.setuptools_scm]
 version_scheme = "guess-next-dev"
 local_scheme = "no-local-version"
-write_to = "nam/_version.py"
+write_to = "ne-mo/_version.py"
 
 [tool.setuptools]
 packages = ["nam", "nam.train", "nam.train.gui", "nam.train.gui._resources", "nam.models", "nam.models._resources" ]
